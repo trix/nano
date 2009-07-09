@@ -35,7 +35,7 @@ h2. More Advanced Example
 Displaying list of twitter search results (JSONP API):
 
 <code>  
-  var template = "<li><strong>@{from_user}</strong> {original_text}</li>"
+  var template = "&lt;li&gt;&lt;strong&gt;@{from_user}&lt;/strong&gt; {original_text}&lt;/li&gt;"
   var query = "beer OR vodka"
   var container = $("ul#tweets")
   
