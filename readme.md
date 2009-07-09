@@ -20,10 +20,10 @@ user = {
 you can make just:
 
 <code>
-  $.nano("<p>Hello {user.first_name} {user.last__name}! Your account is <strong>{user.account.status}</strong></p>", user)
+  $.nano("&lt;p&gt;Hello {user.first_name} {user.last__name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", user)
 </code>
 
 <code>
-  <p>Hello Thomas! Your account is <strong>active</strong></p>
+  &lt;p&gt;Hello Thomas! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
 </code>
   
