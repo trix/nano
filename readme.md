@@ -6,7 +6,7 @@ NANO - jQuery Template Engine
 Assuming you have following JSON response:
 
 <pre>
-user = {
+data= {
   user: {
     login: "tomek",
     first_name: "Thomas",
@@ -22,7 +22,7 @@ user = {
 you can make:
 
 <code>
-  $.nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", user)
+  $.nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", data)
 </code>
 
 and you get ready string:
