@@ -19,11 +19,11 @@ user = {
 
 you can make just:
 
-<pre>
-$.nano("<p>Hello {user.first_name} {user.last__name}! Your account is <strong>{user.account.status}</strong></p>", user)
-</pre>
+<code>
+  $.nano("<p>Hello {user.first_name} {user.last__name}! Your account is <strong>{user.account.status}</strong></p>", user)
+</code>
 
-<pre>
+<code>
   <p>Hello Thomas! Your account is <strong>active</strong></p>
-</pre>
+</code>
   
