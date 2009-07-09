@@ -1,5 +1,6 @@
-NANO - jQuery Template Engine
-=============================
+h1. NANO - jQuery Template Engine
+
+h2. Basic Usage
 
 Assuming you have following JSON response:
 
@@ -17,7 +18,7 @@ user = {
 }  
 </pre>
 
-you can make just:
+you can make:
 
 <code>
   $.nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", user)
@@ -25,5 +26,27 @@ you can make just:
 
 <code>
   &lt;p&gt;Hello Thomas! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
+</code>
+
+Simple huh?
+
+h2. More Advanced Example
+
+Displaying list of twitter search results (JSONP API):
+
+<code>  
+  var template = "<li><strong>@{from_user}</strong> {original_text}</li>"
+  var query = "beer OR vodka"
+  var container = $("ul#tweets")
+  
+  $.getJSON("http://search.twitter.com/search.json?callback=?", {
+      q: query
+    }, function(data) {
+      container.html("")
+      $.each(data.results), function(i, item){
+        container.append($.nano(template, item))
+      }
+    }
+  }
 </code>
   
