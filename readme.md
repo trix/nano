@@ -1,8 +1,7 @@
 NANO - jQuery Template Engine
 =============================
 
-Basic Usage
-===========
+***Basic Usage***
 
 Assuming you have following JSON response:
 
@@ -34,10 +33,18 @@ and you get ready string:
 
 Simple huh?
 
-More Advanced Example
-=====================
+***More Advanced Example***
+
 
 Displaying list of twitter search results (JSONP API)
+
+**html**
+
+<pre>
+  &lt;ul id=&quot;tweets&quot;&gt;&lt;/ul&gt;
+</pre>
+
+**javascript**
 
 <pre>  
   var template = "&lt;li&gt;&lt;strong&gt;@{from_user}&lt;/strong&gt; {original_text}&lt;/li&gt;"
