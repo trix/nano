@@ -6,7 +6,7 @@ NANO - jQuery Template Engine
 Assuming you have following JSON response:
 
 <pre>
-data= {
+data = {
   user: {
     login: "tomek",
     first_name: "Thomas",
@@ -38,26 +38,4 @@ Simple huh?
 
 Displaying list of twitter search results (JSONP API)
 
-**html**
-
-<pre>
-  &lt;ul id=&quot;tweets&quot;&gt;&lt;/ul&gt;
-</pre>
-
-**javascript**
-
-<pre>  
-  var template = "&lt;li&gt;&lt;strong&gt;@{from_user}&lt;/strong&gt; {original_text}&lt;/li&gt;"
-  var query = "beer OR vodka"
-  var container = $("ul#tweets")
-
-  $.getJSON("http://search.twitter.com/search.json?callback=?", {
-      q: query
-    }, function(data) {
-      container.html("")
-      $.each(data.results), function(i, item){
-        container.append($.nano(template, item))
-      }
-    }
-  }
-</pre>
+http://jsfiddle.net/UXZDy/
