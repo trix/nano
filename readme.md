@@ -38,4 +38,4 @@ Simple huh?
 
 Displaying list of twitter search results (JSONP API)
 
-http://jsfiddle.net/UXZDy/
+http://jsfiddle.net/UXZDy/1/
