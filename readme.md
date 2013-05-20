@@ -16,13 +16,13 @@ data = {
       expires_at: "2009-12-31"
     }
   }
-}  
+}
 </pre>
 
 you can make:
 
 <code>
-  $.nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", data)
+  nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", data)
 </code>
 
 and you get ready string:
@@ -38,4 +38,4 @@ Simple huh?
 
 Displaying list of twitter search results (JSONP API)
 
-http://jsfiddle.net/UXZDy/1/
+http://jsfiddle.net/UXZDy/86/
