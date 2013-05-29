@@ -31,6 +31,8 @@ and you get ready string:
   &lt;p&gt;Hello Thomas! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
 </code>
 
+Test page: <a href="testPage.html">testPage.html</a>
+
 Simple huh?
 
 ***More Advanced Example***
