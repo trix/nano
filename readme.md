@@ -1,4 +1,4 @@
-NANO - jQuery Template Engine
+NANO - Template Engine
 =============================
 
 ***Basic Usage***
