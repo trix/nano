@@ -28,7 +28,7 @@ you can make:
 and you get ready string:
 
 <code>
-  &lt;p&gt;Hello Thomas! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
 </code>
 
 Test page: <a href="testPage.html">testPage.html</a>
