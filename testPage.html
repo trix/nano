@@ -15,7 +15,11 @@
                 account: {
                     status: "active",
                     expires_at: "2009-12-31"
-                }
+                },
+                like: [
+                    { name: "football" },
+                    { name: "basketball" }
+                ]
             }
         }
     </script>
@@ -24,12 +28,12 @@
 <body>
 
 
-<p id="testLayout">nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", data)</p>
+<p id="testLayout">nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;. You are like {user.like[0].name} and {user.like[1].name}", data)</p>
 
 
 <script type="text/javascript">
     window.onload = function () {
-        document.getElementById('testLayout').innerHTML = nano("<p>Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong></p>", data);
+        document.getElementById('testLayout').innerHTML = nano("<p>Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong>. You are like {user.like[0].name} and {user.like[1].name}</p>", data);
     }
 </script>
 </body>
