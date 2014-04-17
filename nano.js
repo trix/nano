@@ -10,7 +10,7 @@ function nano(template, data) {
         key = key.split('[');
         val = val[key.shift()];
         while((k = key.shift())) {
-            val = val[parseInt(k, 10)];
+            val = val[k.slice(0, -1)];
         }
     }
 
