@@ -15,6 +15,9 @@
                 account: {
                     status: "active",
                     expires_at: "2009-12-31"
+                },
+                say: function () {
+                    return 'hello world'
                 }
             }
         }
@@ -29,7 +32,7 @@
 
 <script type="text/javascript">
     window.onload = function () {
-        document.getElementById('testLayout').innerHTML = nano("<p>Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong></p>", data);
+        document.getElementById('testLayout').innerHTML = nano("<p>Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}. Say:{user.say()}</strong></p>", data);
     }
 </script>
 </body>

@@ -14,6 +14,9 @@ data = {
     account: {
       status: "active",
       expires_at: "2009-12-31"
+    },
+    say: function(){
+        return 'hello world';
     }
   }
 }
@@ -22,13 +25,13 @@ data = {
 you can make:
 
 <code>
-  nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt;", data)
+  nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt;&lt;/p&gt; say:{user.say()}", data)
 </code>
 
 and you get ready string:
 
 <code>
-  &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt; say:hello world
 </code>
 
 Test page: <a href="testPage.html">testPage.html</a>
