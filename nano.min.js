@@ -1,0 +1,1 @@
+/* github.com/trix/nano - v1 - MIT license */function nano(e,t){return e.replace(/\{([\w\.]*)\}/g,function(e,n){var r=n.split("."),i=t[r.shift()];for(var s=0,o=r.length;s<o;s++)i=i[r[s]];return typeof i!=="undefined"&&i!==null?i:""})}
