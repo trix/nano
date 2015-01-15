@@ -1,4 +1,4 @@
-/* Nano Templates (Tomasz Mazur, Jacek Becela) */
+/* Nano Templates - https://github.com/trix/nano */
 
 function nano(template, data) {
   return template.replace(/\{([\w\.]*)\}/g, function(str, key) {
