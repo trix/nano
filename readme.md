@@ -1,4 +1,4 @@
-NANO - Template Engine
+NANO - Simplest Template Engine
 =============================
 
 ***Basic Usage***
