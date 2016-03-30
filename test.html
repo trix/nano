@@ -11,7 +11,7 @@
             user: {
                 login: "tomek",
                 first_name: "Thomas",
-                last_name: "Mazur",
+                "last name": "Mazur",
                 account: {
                     status: "active",
                     expires_at: "2009-12-31"
@@ -21,12 +21,12 @@
     </script>
   </head>
   <body>
-    <p id="testLayout">nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)</p>
-    <p id="testLayoutshowUndefined">nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)</p>
+    <p id="testLayout">nano("&lt;p&gt;Hello {user.first_name} {user.last name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)</p>
+    <p id="testLayoutshowUndefined">nano("&lt;p&gt;Hello {user.first_name} {user.last name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)</p>
 
     <script type="text/javascript">
       window.onload = function () {
-        var nanoString = "<p>Hello {user.first_name} {user.last_name}! Your account is <strong>{user.account.status}</strong> {user.nonexistingnode}</p>";
+        var nanoString = "<p>Hello {user.first_name} {user.last name}! Your account is <strong>{user.account.status}</strong> {user.nonexistingnode}</p>";
 
         document.getElementById('testLayout').innerHTML              = nano(nanoString, data);
         document.getElementById('testLayoutshowUndefined').innerHTML = nano(nanoString, data, true);
