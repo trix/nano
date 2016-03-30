@@ -30,12 +30,12 @@ Assuming you have following JSON response:
 <pre>
 data = {
   user: {
-    login: "tomek",
-    first_name: "Thomas",
-    last_name: "Mazur",
+    login: "demo",
+    first_name: "Anon",
+    "last name": "Ymous",
     account: {
       status: "active",
-      expires_at: "2009-12-31"
+      expires_at: "2016-12-31"
     },
     greeting: function(){
       return 'Hello';
@@ -53,7 +53,7 @@ you can do:
 and you get the following string:
 
 <code>
-  &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;Hello Anon Ymous! Your account is &lt;strong&gt;active&lt;/strong&gt; &lt;/p&gt;
 </code>
 
 or you can do:
@@ -65,7 +65,7 @@ or you can do:
 and you get the following string:
 
 <code>
-  &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;
+  &lt;p&gt;Hello Anon Ymous! Your account is &lt;strong&gt;active&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;
 </code>
 
 
