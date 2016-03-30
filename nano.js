@@ -1,4 +1,7 @@
-/* Nano Templates - https://github.com/trix/nano */
+/*
+  Nano Templates - https://github.com/trix/nano
+                 - https://github.com/azettl/nano
+*/
 
 function nano(template, data, showUndefined) {
   return template.replace(/\{([\w\.]*)\}/g, function(str, key) {
