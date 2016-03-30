@@ -36,6 +36,9 @@ data = {
     account: {
       status: "active",
       expires_at: "2009-12-31"
+    },
+    greeting: function(){
+      return 'Hello';
     }
   }
 }
@@ -44,7 +47,7 @@ data = {
 you can do:
 
 <code>
-  nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)
+  nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)
 </code>
 
 and you get the following string:
@@ -56,7 +59,7 @@ and you get the following string:
 or you can do:
 
 <code>
-  nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)
+  nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)
 </code>
 
 and you get the following string:

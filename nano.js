@@ -13,9 +13,9 @@
 */
 function nano(t, d, u) {
   "use strict";
-  return t.replace(/\{([\w\.\s]*)\}/g, function (s, k) {
+  return t.replace(/\{([\w\.\s\(\)]*)\}/g, function (s, k) {
     var p = k.split("."), v = d[p.shift()];
-    p.forEach(function (e) { v = (typeof v !== "undefined") ? v[e] : undefined; });
+    p.forEach(function (e) { v = (typeof v !== "undefined") ? (e.match(/\(\)/) ? v[e.replace(/\(\)/, '')](): v[e]) : undefined; });
     return (typeof v !== "undefined" && v !== null) ? v : (u ? s : "");
   });
 }
