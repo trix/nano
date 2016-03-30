@@ -4,9 +4,10 @@
 */
 
 function nano(template, data, showUndefined) {
-  return template.replace(/\{([\w\.]*)\}/g, function(str, key) {
+  "use strict";
+  return template.replace(/\{([\w\.]*)\}/g, function (str, key) {
     var keys = key.split("."), v = data[keys.shift()];
-    for (var i = 0, l = keys.length; i < l; i++){ v = v[keys[i]]; k = str; }
-    return (typeof v !== "undefined" && v !== null) ? v : (showUndefined ? k : "");
+    keys.forEach(function (e) { v = v[e]; });
+    return (typeof v !== "undefined" && v !== null) ? v : (showUndefined ? str : "");
   });
 }
