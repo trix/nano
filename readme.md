@@ -19,38 +19,29 @@ data = {
 }
 </pre>
 
-you can make:
+you can do:
 
 <code>
   nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)
 </code>
 
-and you get ready string:
+and you get the following string:
 
 <code>
   &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt;&lt;/p&gt;
 </code>
 
-or you can make:
+or you can do:
 
 <code>
   nano("&lt;p&gt;Hello {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)
 </code>
 
-and you get ready string:
+and you get the following string:
 
 <code>
   &lt;p&gt;Hello Thomas Mazur! Your account is &lt;strong&gt;active&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;
 </code>
 
 
-Test page: <a href="testPage.html">testPage.html</a>
-
-Simple huh?
-
-***More Advanced Example***
-
-
-Displaying list of twitter search results (JSONP API)
-
-http://jsfiddle.net/UXZDy/86/
+The test page can be found here: <a href="testPage.html">testPage.html</a>
