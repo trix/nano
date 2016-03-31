@@ -47,7 +47,7 @@ data = {
 you can do:
 
 <code>
-  nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)
+  nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)
 </code>
 
 and you get the following string:
@@ -59,7 +59,7 @@ and you get the following string:
 or you can do:
 
 <code>
-  nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last_name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)
+  nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)
 </code>
 
 and you get the following string:
@@ -70,4 +70,4 @@ and you get the following string:
 
 
 
-The test page can be found here: <a href="testPage.html">testPage.html</a>
+The test page can be found here: <a href="test.html">test.html</a>
