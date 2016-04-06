@@ -21,7 +21,7 @@
 
         window.onload = function () {
           var nanoString = "<p>{user.greeting()} {user.first_name} {user.last name}! Your account is <strong>{user.account.status}</strong> {user.nonexistingnode}</p>";
-
+          nanoExternal('test.template.html', data, false, document.getElementById('testLayoutLoadExternalAsync'));
           document.getElementById('testLayout').innerHTML              = nano(nanoString, data);
           document.getElementById('testLayoutshowUndefined').innerHTML = nano(nanoString, data, true);
           document.getElementById('testLayoutLoadExternal').innerHTML  = nanoExternal('test.template.html', data, true);
@@ -32,5 +32,6 @@
     <p id="testLayout">nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data)</p>
     <p id="testLayoutshowUndefined">nano("&lt;p&gt;{user.greeting()} {user.first_name} {user.last name}! Your account&nbsp;is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data, true)</p>
     <p id="testLayoutLoadExternal">Load template from test.template.html</p>
+    <p id="testLayoutLoadExternalAsync">Load template from test.template.html</p>
   </body>
 </html>

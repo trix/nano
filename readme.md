@@ -13,7 +13,7 @@ The *nano()* method replaces text like {user.lastname} with data from an JSON ob
 **Parameters**
 
   *t* (string)   
-  The template / string in which the replacement should happen.
+  The template string in which the replacement should happen.
 
   *d* (object)   
   The JSON object.
@@ -21,6 +21,26 @@ The *nano()* method replaces text like {user.lastname} with data from an JSON ob
   *u* (boolean)  
   Optional. Whether strings which can't be replaced should be shown.
 
+
+
+  **Syntax**
+
+  <pre>nanoExternal(t, d[, u, e])</pre>
+    
+
+  **Parameters**
+
+    *t* (string)   
+    The template url in which the replacement should happen.
+
+    *d* (object)   
+    The JSON object.
+
+    *u* (boolean)  
+    Optional. Whether strings which can't be replaced should be shown.
+
+    *e* (object)  
+    Optional. dom element, if a dom element is provided the replaced text will be loaded in that instead of returned.
 
 
 ***Examples***
