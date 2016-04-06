@@ -68,6 +68,11 @@ and you get the following string:
   &lt;p&gt;Hello Anon Ymous! Your account is &lt;strong&gt;active&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;
 </code>
 
+You can now also load an external template via nanoExternal('test.template.html', data, true);
+The parameters are the same except that the first parameter requires an url.
 
+<code>
+  nanoExternal('test.template.html', data, true)
+</code>
 
 The test page can be found here: <a href="test.html">test.html</a>

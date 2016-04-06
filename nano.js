@@ -19,3 +19,8 @@ function nano(t, d, u) {
     return (typeof v !== "undefined" && v !== null) ? v : (u ? s : "");
   });
 }
+
+function nanoExternal(t, d, u) {
+  h = new XMLHttpRequest(); h.open('GET', t, false); h.send(null);
+  return (h.status === 200) ? nano(h.responseText, d, u) : 'Error: ' + h.status;
+}
