@@ -26,21 +26,21 @@ The *nano()* method replaces text like {user.lastname} with data from an JSON ob
   **Syntax**
 
   <pre>nanoExternal(t, d[, u, e])</pre>
-    
+
 
   **Parameters**
 
-    *t* (string)   
-    The template url in which the replacement should happen.
+  *t* (string)   
+  The template url in which the replacement should happen.
 
-    *d* (object)   
-    The JSON object.
+  *d* (object)   
+  The JSON object.
 
-    *u* (boolean)  
-    Optional. Whether strings which can't be replaced should be shown.
+  *u* (boolean)  
+  Optional. Whether strings which can't be replaced should be shown.
 
-    *e* (object)  
-    Optional. dom element, if a dom element is provided the replaced text will be loaded in that instead of returned.
+  *e* (object)  
+  Optional. dom element, if a dom element is provided the replaced text will be loaded in that instead of returned.
 
 
 ***Examples***
@@ -93,6 +93,12 @@ The parameters are the same except that the first parameter requires an url.
 
 <code>
   nanoExternal('test.template.html', data, true)
+</code>
+
+or you pass the optional dom node and the replaced text will be directly loaded into that node.
+
+<code>
+  nanoExternal('test.template.html', data, true, document.getElementById('myId'))
 </code>
 
 The test page can be found here: <a href="test.html">test.html</a>
