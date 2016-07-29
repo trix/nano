@@ -10,7 +10,6 @@
     browser, white
 */
 
-
 /*
   Function nano
 
@@ -43,6 +42,6 @@ function nano(t, d, u) {
 function nanoExternal(t, d, u, e) {
   "use strict";
   var h = new XMLHttpRequest(); h.open("GET", t, e);
-  if(e) { h.onreadystatechange = function() { e.innerHTML = nano(h.responseText, d, u); };} h.send();
+  if(e) { h.onreadystatechange = function() { e.innerHTML = nano(h.responseText, d, u); }; } h.send();
   return (h.status === 200) ? nano(h.responseText, d, u) : "Error: " + h.status;
 }
