@@ -3,24 +3,29 @@
                  - https://github.com/azettl/nano
 
   Used to replace text like {user.lastname} with data from an json
-  object like {user: {lastname: 'demo'}}.
+  object like {user: {lastname: "demo"}}.
 */
+
+/*jslint
+    browser, white
+*/
+
 
 /*
   Function nano
 
   @param string  t   the template string in which the replacement should happen.
   @param object  d   the json object.
-  @param boolean u   whether strings which can't be replaced should be shown.
+  @param boolean u   whether strings which can not be replaced should be shown.
 
   @return string     the replaced template / string.
 */
 function nano(t, d, u) {
   "use strict";
   return t.replace(/\{([\w\.\s\(\)]*)\}/g, function (s, k) {
-    var p = k.split("."), v = d[p.shift()];
-    p.forEach(function (e) { v = (typeof v !== "undefined") ? (e.match(/\(\)/) ? v[e.replace(/\(\)/, '')]() : v[e]) : undefined; });
-    return (typeof v !== "undefined" && v !== null) ? v : (u ? s : "");
+    var p = k.split("."); var v = d[p.shift()];
+    p.forEach(function (e) { v = (v) ? (e.match(/\(\)/) ? v[e.replace(/\(\)/, "")]() : v[e]) : undefined; });
+    return (v && v !== null) ? v : (u ? s : "");
   });
 }
 
@@ -29,7 +34,7 @@ function nano(t, d, u) {
 
   @param string  t   the template url in which the replacement should happen.
   @param object  d   the json object.
-  @param boolean u   whether strings which can't be replaced should be shown.
+  @param boolean u   whether strings which can not be replaced should be shown.
   @param boolean e   dom element, if a dom element is provided the replaced text
                      will be loaded in that instead of returned.
 
@@ -37,7 +42,7 @@ function nano(t, d, u) {
 */
 function nanoExternal(t, d, u, e) {
   "use strict";
-  var h = new XMLHttpRequest(); h.open('GET', t, (typeof e === 'undefined') ? false : true);
-  if(typeof e !== 'undefined'){ h.onreadystatechange = function(){ e.innerHTML = nano(h.responseText, d, u); }}; h.send();
-  return (h.status === 200) ? nano(h.responseText, d, u) : 'Error: ' + h.status;
+  var h = new XMLHttpRequest(); h.open("GET", t, e);
+  if(e) { h.onreadystatechange = function() { e.innerHTML = nano(h.responseText, d, u); };} h.send();
+  return (h.status === 200) ? nano(h.responseText, d, u) : "Error: " + h.status;
 }
