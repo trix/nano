@@ -23,7 +23,7 @@ function nano(t, d, u) {
   "use strict";
   return t.replace(/\{([\w\.\s\(\)]*)\}/g, function (s, k) {
     var p = k.split("."); var v = d[p.shift()];
-    p.forEach(function (e) { v = (v) ? (e.match(/\(\)/) ? v[e.replace(/\(\)/, "")]() : v[e]) : undefined; });
+    p.forEach(function (e) { v = (v) ? (e.match(/\(\)/) ? v[e.replace(/\(\)/, "")]() : v[e]) : null; });
     return (v && v !== null) ? v : (u ? s : "");
   });
 }
