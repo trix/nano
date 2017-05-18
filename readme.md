@@ -1,6 +1,8 @@
 NANO - Template Engine
 =============================
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b709fa6c872242faa6c84e12c9f8d298)](https://www.codacy.com/app/azettl/nano?utm_source=github.com&utm_medium=referral&utm_content=azettl/nano&utm_campaign=badger)
+
 ***nano()***
 
 The *nano()* method replaces text like {user.lastname} with data from an JSON object like {user: {lastname: 'demo'}}.
