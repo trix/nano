@@ -1,40 +1,36 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Nano QUnit Tests</title>
- 
-  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.0.css">
-  <script src="https://code.jquery.com/qunit/qunit-2.4.0.js"></script>
-  <script src="../nano.js"></script>
- 
-  <script>
-  QUnit.test("nano tests", function( assert ) {
-    data = {
-      user: {
-        login: "demo",
-        first_name: "Anon",
-        "last name": "Ymous",
-        account: {
-          status: "active",
-          expires_at: "2016-12-31"
-        },
-        greeting: function(){
-          return 'Hello';
+  <head>
+    <meta charset="utf-8">
+    <title>Nano QUnit Tests</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.0.css">
+    <script src="https://code.jquery.com/qunit/qunit-2.4.0.js"></script>
+    <script src="../nano.js"></script>
+    <script>
+      QUnit.test("nano tests", function( assert ) {
+        data = {
+          user: {
+            login: "demo",
+            first_name: "Anon",
+            "last name": "Ymous",
+            account: {
+              status: "active",
+              expires_at: "2016-12-31"
+            },
+            greeting: function(){
+              return 'Hello';
+            }
+          }
         }
-      }
-    }
-    var nanoString = "<p>{user.greeting()} {user.first_name} {user.last name}! Your account is <strong>{user.account.status}</strong> {user.nonexistingnode}</p>";
+        var nanoString = "<p>{user.greeting()} {user.first_name} {user.last name}! Your account is <strong>{user.account.status}</strong> {user.nonexistingnode}</p>";
 
-    assert.equal(nano(nanoString, data), "<p>Hello Anon Ymous! Your account is <strong>active</strong> </p>");
-    assert.equal(nano(nanoString, data, true), "<p>Hello Anon Ymous! Your account is <strong>active</strong> {user.nonexistingnode}</p>");
-    assert.equal(nanoExternal('test.template.html', data, true), "<h1>Loaded from test.template.html</h1><p>Hello Anon Ymous! Your account is <strong>active</strong> {user.nonexistingnode}</p>");
-  });
-  </script>
-</head>
-<body>
- 
-<div id="qunit"></div>
- 
-</body>
+        assert.equal(nano(nanoString, data), "<p>Hello Anon Ymous! Your account is <strong>active</strong> </p>");
+        assert.equal(nano(nanoString, data, true), "<p>Hello Anon Ymous! Your account is <strong>active</strong> {user.nonexistingnode}</p>");
+        assert.equal(nanoExternal('test.template.html', data, true), "<h1>Loaded from test.template.html</h1><p>Hello Anon Ymous! Your account is <strong>active</strong> {user.nonexistingnode}</p>");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="qunit"></div>
+  </body>
 </html>
