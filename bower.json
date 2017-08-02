@@ -1,0 +1,26 @@
+{
+  "name": "js-nano-template",
+  "description": "The *nano()* method replaces text like {user.lastname} with data from an JSON object like {user: {lastname: 'demo'}}.",
+  "main": [
+    "nano.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "moduleType": [],
+  "keywords": [
+    "template",
+    "engine"
+  ],
+  "authors": [
+    "Andreas Zettl <info@azettl.net>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "tests"
+  ],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azettl/js-nano-template.git"
+  }
+}
