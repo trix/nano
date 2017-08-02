@@ -12,6 +12,12 @@ The *nano()* method replaces text like {user.lastname} with data from an JSON ob
   bower install js-nano-template
 ```
 
+or 
+
+```cmd
+  npm install js-nano-template
+```
+
 **Syntax**
 
 ```javascript
