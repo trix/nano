@@ -1,6 +1,6 @@
 /*
   Nano Templates - https://github.com/trix/nano
-                 - https://github.com/azettl/nano
+                 - https://github.com/azettl/js-nano-template
 
   Used to replace text like {user.lastname} with data from an json
   object like {user: {lastname: "demo"}}.
