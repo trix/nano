@@ -111,5 +111,3 @@ or you pass the optional dom node and the replaced text will be directly loaded 
 ```javascript
   nanoExternal('test.template.html', data, true, document.getElementById('myId'))
 ```
-
-The test page can be found here: <a href="test.html">test.html</a>
