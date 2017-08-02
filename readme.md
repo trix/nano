@@ -8,11 +8,15 @@ NANO - Template Engine
 The *nano()* method replaces text like {user.lastname} with data from an JSON object like {user: {lastname: 'demo'}}.
 
 ## Installation
-<pre>bower install js-nano-template</pre>
+```cmd
+  bower install js-nano-template
+```
 
 **Syntax**
 
-<pre>nano(t, d[, u])</pre>
+```javascript
+  nano(t, d[, u])
+```
 
 
 **Parameters**
@@ -30,7 +34,9 @@ The *nano()* method replaces text like {user.lastname} with data from an JSON ob
 
   **Syntax**
 
-  <pre>nanoExternal(t, d[, u, e])</pre>
+  ```javascript
+    nanoExternal(t, d[, u, e])
+  ```
 
 
   **Parameters**
@@ -77,7 +83,7 @@ you can do:
 
 and you get the following string:
 
-```javascript
+```html
   &lt;p&gt;Hello Anon Ymous! Your account is &lt;strong&gt;active&lt;/strong&gt; &lt;/p&gt;
 ```
 
@@ -89,7 +95,7 @@ or you can do:
 
 and you get the following string:
 
-```javascript
+```html
   &lt;p&gt;Hello Anon Ymous! Your account is &lt;strong&gt;active&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;
 ```
 
