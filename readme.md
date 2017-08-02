@@ -7,6 +7,9 @@ NANO - Template Engine
 
 The *nano()* method replaces text like {user.lastname} with data from an JSON object like {user: {lastname: 'demo'}}.
 
+***Installation***
+<pre>bower install js-nano-template</pre>
+
 **Syntax**
 
 <pre>nano(t, d[, u])</pre>
