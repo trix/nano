@@ -18,6 +18,12 @@ or
   npm install js-nano-template
 ```
 
+or 
+
+```cmd
+  yarn add js-nano-template
+```
+
 **Syntax**
 
 ```javascript
