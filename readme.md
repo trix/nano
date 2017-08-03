@@ -123,3 +123,13 @@ or you pass the optional dom node and the replaced text will be directly loaded 
 ```javascript
   nanoExternal('test.template.html', data, true, document.getElementById('myId'))
 ```
+
+or
+
+```javascript
+  var jsNanoTemplate = require("js-nano-template");
+
+  console.log(jsNanoTemplate("&lt;p&gt;{user.greeting()} {user.first_name} {user.last name}! Your account is &lt;strong&gt;{user.account.status}&lt;/strong&gt; {user.nonexistingnode}&lt;/p&gt;", data));
+```
+
+Running Sample https://runkit.com/azettl/js-nano-template
