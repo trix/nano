@@ -1,6 +1,6 @@
 {
   "name": "js-nano-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The *nano()* method replaces text like {user.lastname} with data from an JSON object like {user: {lastname: 'demo'}}.",
   "main": "nano.js",
   "repository": {

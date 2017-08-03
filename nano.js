@@ -45,3 +45,13 @@ function nanoExternal(t, d, u, e) {
   if(e) { h.onreadystatechange = function() { e.innerHTML = nano(h.responseText, d, u); }; } h.send();
   return (h.status === 200) ? nano(h.responseText, d, u) : "Error: " + h.status;
 }
+
+if(typeof module != "undefined") { 
+  module.nano = function(t, d, u) {
+      return nano(t, d, u);
+  };
+
+  module.nanoExternal = function(t, d, u, e) {
+      return nanoExternal(t, d, u, e);
+  };
+}
