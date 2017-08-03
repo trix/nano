@@ -47,11 +47,7 @@ function nanoExternal(t, d, u, e) {
 }
 
 if(typeof module != "undefined") { 
-  module.nano = function(t, d, u) {
+  module.exports = function(t, d, u) {
       return nano(t, d, u);
-  };
-
-  module.nanoExternal = function(t, d, u, e) {
-      return nanoExternal(t, d, u, e);
   };
 }
